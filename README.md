@@ -1,2 +1,2 @@
 # Odin-Project-JS
-Rock paper scissors, etch-a-sketch, calculator
+This repository holds 3 projects from the Odin Project: Rock paper scissors, etch-a-sketch, calculator. Open

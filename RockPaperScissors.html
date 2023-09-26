@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <script>
+    
+    let playerScore = 0
+    let computerScore = 0
+    const myArray = ['rock', 'paper', 'scissors'];
+
+    function getComputerChoice(){
+        return computerSelection = myArray[~~(Math.random() * myArray.length)];
+    }
+    function getPlayerChoice(){
+        return input = prompt("Pick rock, paper, or scissors").toLowerCase()
+    }
+
+    function playRound(playerSelection, computerSelection){
+        playerSelection = getPlayerChoice()
+        computerSelection = getComputerChoice() 
+
+        if  ((playerSelection == 'rock' && computerSelection == 'scissors')||
+            (playerSelection == 'scissors' && computerSelection == 'paper' ) ||
+            (playerSelection == 'paper' && computerSelection == 'rock' ))
+        {
+            playerScore = playerScore + 1
+            return "You win!"
+            }
+            else if ((playerSelection == 'rock' && computerSelection == 'paper') ||
+                    (playerSelection == 'scissors' && computerSelection == 'rock' )||
+                    (playerSelection == 'paper' && computerSelection == 'scissors' )){
+            computerScore = computerScore + 1
+            return "You Lose!"   
+            }
+      
+            else if (playerSelection == computerSelection){
+            return "It's a tie!";
+            }
+
+            else{
+            return "error";
+            }  
+    }   
+
+    function game(){
+        if(true){
+            for(let i = 1; i <= 5; i++) {
+            playRound(i)
+            console.log("round: " + i)
+            console.log("Player score: " + playerScore)
+            console.log("Computer score: " + computerScore)
+            }
+        }
+    }
+
+    function reset(){
+        if (i= 5) {
+            let round = 1
+            let playerScore = 0
+            let computerScore = 0
+        }
+    }
+
+        //how to continue loop so it doesn't restart from the beginning 
+    </script> 
+  </head>
+  <body>
+  </body>
+</html>
